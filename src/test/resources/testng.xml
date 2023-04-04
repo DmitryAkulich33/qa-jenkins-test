@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Multithreading in different browsers" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="by.tms.util.AnnotationTransformer"/>
+        <listener class-name="by.tms.util.TestListener"/>
+    </listeners>
+    <test name="Tests for Chrome">
+        <classes>
+            <class name="by.tms.LoginTest"/>
+            <class name="by.tms.CartTest"/>
+            <parameter name="browser" value="chrome"/>
+        </classes>
+    </test>
+    <test name="Tests for Firefox">
+        <classes>
+            <class name="by.tms.LoginTest"/>
+            <class name="by.tms.CartTest"/>
+            <parameter name="browser" value="firefox"/>
+        </classes>
+    </test>
+</suite>
