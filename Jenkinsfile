@@ -24,7 +24,7 @@ pipeline {
                     // sh "mvn -Dmaven.test.failure.ignore=true clean package"
 
                     // To run Maven on a Windows agent, use
-                    bat "mvn clean test -DsuiteXmlFile=src/test/resources/${params.BRANCH}"
+                    bat "mvn clean test -DsuiteXmlFile=src/test/resources/${params.TEST_NG_XML}"
                 }
             }
         }
