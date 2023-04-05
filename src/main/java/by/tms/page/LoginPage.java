@@ -30,7 +30,7 @@ public class LoginPage extends BasePage {
 
     @Step("Login as a standard user")
     public ProductsPage loginAsStandardUser() {
-        loginAs("standard_user", "secret_sauce");
+        loginAs(System.getenv("USERNAME"), System.getenv("PASSWORD"));
         return new ProductsPage(webDriver);
     }
 
