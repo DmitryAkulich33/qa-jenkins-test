@@ -9,6 +9,7 @@ pipeline {
     parameters {
         gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH'
         credentials credentialType: 'com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl', defaultValue: 'f06ff511-214e-4a9e-af18-02716fdbc2eb', name: 'STANDARD_USER_CREDS', required: true
+        choice choices: ['testng.xml', 'testng2.xml'], name: 'TEST_NG_XML'
     }
 
     stages {
